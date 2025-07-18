@@ -1,16 +1,20 @@
-# native_biometric_auth
+🛡️ Native Biometric Auth
+A Flutter application that implements native Android biometric authentication (like fingerprint and face unlock) using platform channels instead of third-party plugins.
 
-A new Flutter project.
+🔧 Features
+Biometric login using Android's native BiometricPrompt API
 
-## Getting Started
+Uses platform channels to bridge Flutter and native Android
 
-This project is a starting point for a Flutter application.
+Secure authentication experience with native system UI
 
-A few resources to get you started if this is your first Flutter project:
+Written in Dart (Flutter) and Kotlin (Android)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🧠 Why Native?
+Unlike common biometric plugins, this project shows how to manually bridge Flutter and Android using platform channels for:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+More control over the authentication logic
+
+Better compatibility and flexibility
+
+Learning and understanding how native and Flutter code communicate
