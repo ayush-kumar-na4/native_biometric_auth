@@ -44,6 +44,7 @@ flutter {
 }
 
 dependencies {
-    // ...existing dependencies...
-    implementation("androidx.biometric:biometric:1.1.0")
+
+    // Kotlin
+    implementation("androidx.biometric:biometric:1.4.0-alpha04")
 }

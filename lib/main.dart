@@ -8,9 +8,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: AuthGate(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: AuthGate());
   }
 }
 
@@ -47,12 +45,8 @@ class _AuthGateState extends State<AuthGate> {
   @override
   Widget build(BuildContext context) {
     if (!_authenticated) {
-      return const Scaffold(
-        body: Center(child: Text('Authenticating...')),
-      );
+      return const Scaffold(body: Center(child: Text('Authenticating...')));
     }
-    return const Scaffold(
-      body: Center(child: Text('Welcome to the app!')),
-    );
+    return const Scaffold(body: Center(child: Text('Welcome to the app!')));
   }
 }

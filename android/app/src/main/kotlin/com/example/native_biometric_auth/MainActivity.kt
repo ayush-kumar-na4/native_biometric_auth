@@ -4,16 +4,16 @@ import android.os.Bundle
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
-import io.flutter.embedding.android.FlutterFragmentActivity   // ⬅️ change
+import io.flutter.embedding.android.FlutterFragmentActivity   
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 import java.util.concurrent.Executor
 
-class MainActivity : FlutterFragmentActivity() {            // ⬅️ change
+class MainActivity : FlutterFragmentActivity() {           
     private val CHANNEL = "native_auth"
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
-        super.configureFlutterEngine(flutterEngine)
+        super.configureFlutterEngine(flutterEngine) 
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL)
             .setMethodCallHandler { call, result ->
                 if (call.method == "authenticate") {
@@ -37,17 +37,11 @@ class MainActivity : FlutterFragmentActivity() {            // ⬅️ change
             .build()
 
         val biometricPrompt = BiometricPrompt(
-            this,                      // now a FragmentActivity ✅
+            this,                      
             executor,
             object : BiometricPrompt.AuthenticationCallback() {
                 override fun onAuthenticationSucceeded(authResult: BiometricPrompt.AuthenticationResult) {
                     result.success(true)
-                }
-                override fun onAuthenticationError(code: Int, msg: CharSequence) {
-                    result.success(false)
-                }
-                override fun onAuthenticationFailed() {
-                    result.success(false)
                 }
             }
         )
