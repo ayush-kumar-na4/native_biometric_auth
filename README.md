@@ -1,4 +1,4 @@
-# 🔐 Flutter Native Android Authentication
+# 🔐 Flutter Android Authentication
 
 ![Platform](https://img.shields.io/badge/platform-Android-green)
 ![Flutter](https://img.shields.io/badge/built_with-Flutter-blue)
@@ -18,7 +18,6 @@ A Flutter application integrating **Android’s native biometric and device cred
   - If device has **no lock** → App is directly accessible
   - If lock exists → Auth prompt shown
 - 🔄 System-managed lockout after multiple failed attempts
-- 🙅‍♂️ Auto app-close if user cancels authentication
 
 ---
 
@@ -59,21 +58,15 @@ A Flutter application integrating **Android’s native biometric and device cred
 
 ## 📥 Download APK
 
-You can download the latest APK release from Google Drive:
+You can download the latest APK release from Google Drive and test it on your own device:
 
 👉 [Download APK](https://drive.google.com/file/d/1kNYvw9pbjMHL4wGrCc2a6kjUf2ahk7-q/view?usp=sharing)
-
-> 🔐 Ensure the file is publicly accessible
 
 ---
 
 ## 📸 Screenshots
 
-### 🔐 Biometric Prompt
-![Biometric Prompt](screenshots/biometric_prompt.png)
+| 🔐 Biometric Prompt | 🔁 Fallback to PIN/Password | ✅ Welcome Screen | ❌ Wrong Credentials Attempted |
+|---------------------|----------------------------|------------------|-------------------------------|
+| ![Biometric Prompt](https://github.com/user-attachments/assets/84312d07-9933-4f70-be06-0f6db2062334) | ![Fallback Screen](https://github.com/user-attachments/assets/3c88dcec-427d-4e69-ad61-d44220633bda) | ![Successful Authentication](https://github.com/user-attachments/assets/782cb643-5c0d-4b11-8304-3a0be49d2970) | ![Too many incorrect attempts](https://github.com/user-attachments/assets/803027af-ece4-406a-9419-b84dc740fc5c) |
 
-### 🔁 Fallback to PIN/Password
-![Fallback Screen](screenshots/fallback_pin.png)
-
-### ✅ Welcome Screen
-![Welcome Screen](screenshots/welcome_screen.png)
